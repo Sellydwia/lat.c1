@@ -1,0 +1,100 @@
+Upgrade Latihan 6 (yang hanya operasi tambah) dengan operasi kurang, kali, bagi, 
+dan modulus. Tidak ada video tutorial, silahkan kalian berkreasi 
+dengan coding! Happy Challenge!
+<hr />
+<input id="input1" />
+<label>+</label>
+<input id="input2" />
+<label>-</label>
+<input id="input3" />
+<button onclick="hitung()">Hitung</button>
+<label id="hasil">Hasil</label>
+
+<script>
+  function hitung() {
+    // alert("sedang melakukan proses hitung..."); 
+    let input1 = document.getElementById("input1").value;
+    let input2 = document.getElementById("input2").value;
+    let input3 = document.getElementById("input3").value;
+    let hasil;
+
+    input1 = parseInt(input1);
+    input2 = parseInt(input2);
+    input2 = parseInt(input2);
+
+    if (!isNaN(input1) && !isNaN(input2) && !isNaN(input3)) {
+      hasil = input1 + input2 - input3;
+    } else {
+      hasil = "nilai input invalid";
+    }
+
+    document.getElementById("hasil").innerHTML = hasil;
+
+    console.log(typeof input1, typeof input2, typeof input2, hasil);
+  }
+</script>
+
+<hr />
+<input id="input4" />
+<label>*</label>
+<input id="input5" />
+<label>/</label>
+<input id="input6" />
+<button onclick="hitung2()">Hitung</button>
+<label id="hasil2">Hasil</label>
+
+<script>
+  function hitung2() {
+  let input4 = document.getElementById("input4").value;
+  let input5 = document.getElementById("input5").value;
+  let input6 = document.getElementById("input6").value;
+  let hasil;
+
+  input1 = parseInt(input4);
+  input2 = parseInt(input5);
+  input3 = parseInt(input6);
+
+  if (!isNaN(input4) && !isNaN(input5) && !isNaN(input6)) {
+    hasil = input4 * input5 / input6;
+  } else {
+    hasil = "nilai input invalid";
+  }
+
+  document.getElementById("hasil2").innerHTML = hasil;
+
+  console.log(typeof input4, typeof input5, typeof input6, hasil);
+}
+</script>
+
+<hr />
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modulus Calculator</title>
+</head>
+<body>
+    <input type="text" id="input7" placeholder="Enter a number">
+    <input type="text" id="input8" placeholder="Enter another number">
+    <button onclick="calculateModulus()">Calculate Modulus</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateModulus() {
+            let input7 = document.getElementById("input7").value;
+            let input8 = document.getElementById("input8").value;
+            let result;
+
+            input7 = parseInt(input7);
+            input8 = parseInt(input8);
+
+            if (!isNaN(input7) && !isNaN(input8) && input8 !== 0) {
+                result = input7 % input8;
+            } else {
+                result = "Invalid input or division by zero";
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
